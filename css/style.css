@@ -672,6 +672,111 @@ p.btn {margin: 0;}
 .pc {display: none;}
 
 
+/* 相手メッセージのCSS */
+.room ul, .chat.you li, .chat.me li{
+	margin: 0;
+	padding: 0;
+}
+
+.room p{
+	margin: 0;
+	padding: 0;
+}
+
+.room ul, .chat.me li {
+	list-style: none;
+}
+
+.room {
+    width: 100%;        /* チャットルームの幅を指定 */
+    background: #eee;    /* チャットルームの背景を灰色 */
+    padding: 10px;       /* 余白を10pxキープ */
+    margin: 0 auto;      /* 画面中央に配置 */
+}
+
+.chat {
+    display: flex;        /* 要素を横並び */
+    margin-bottom: 10px;  /* チャット同士に隙間を作る */
+}
+
+.chat .mes {
+    max-width: 70%;       /* 短いチャットにも対応させるため、widthではなくmax-widthを指定 */
+    border-radius: 20px;  /* （あとでも可）角丸を指定 */
+    padding: 0.5em;       /* （あとでも可）メッセージの内側に余白 */
+}
+
+.chat .status {
+    color: #aaa;          /* 文字色を灰色に指定 */
+    font-size: 11px;      /* 文字サイズは小さめ */
+    align-self: flex-end; /* この要素は下寄せ */
+    margin: 0 5px;        /* 左右に隙間を作る（ちょっと楽してます） */
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 600px) {
+    .room {
+        width: 100%;          /* チャットルームの幅を画面いっぱいにする */
+        padding: 10px 5px;    /* 水平余白を縮小 */
+    }
+
+    .chat {
+        flex-direction: column; /* 小さな画面では縦方向に並べる */
+    }
+
+    .chat .mes {
+        max-width: 100%;       /* メッセージの最大幅を100%にする */
+        margin-bottom: 10px;   /* 下に余白を追加 */
+    }
+
+    .chat .status {
+        font-size: 10px;       /* ステータスの文字サイズを小さくする */
+        text-align: left;      /* 小さな画面では左寄せにする */
+        margin: 5px 0;         /* 上下にマージンを追加 */
+    }
+}
+
+/* 相手メッセージのCSS */
+.chat.you .mes {
+	color: #000;        /* 文字色を白 */
+	background: #fff;   /* 背景を黒 */
+  }
+  
+  /* 自分メッセージのCSS */
+  .chat.me {
+	flex-direction: row-reverse;  /* 左右の並び順を逆順にする */
+  }
+  
+  .chat.me .mes {
+	color: #000;
+	background: #5AC323;         /* 背景色を緑 */
+  }
+  
+  .chat .status {
+	text-align: right;            /* 右寄せにする */
+  }
+  
+  /* レスポンシブ対応 */
+  @media screen and (max-width: 600px) {
+	.chat {
+	  flex-direction: column;        /* 小さな画面では縦方向に並べる */
+	}
+  
+	.chat .mes {
+	  max-width: 90%;                /* メッセージの最大幅を90%にする */
+	  margin-bottom: 10px;           /* 下に余白を追加 */
+	}
+  
+	.chat.me {
+	  flex-direction: column;        /* 自分のメッセージも縦方向に並べる */
+	}
+  
+	.chat .status {
+	  font-size: 10px;               /* ステータスの文字サイズを小さくする */
+	  text-align: left;              /* 小さな画面では左寄せにする */
+	  margin: 5px 0;                 /* 上下にマージンを追加 */
+	}
+  }
+
 
 
 
