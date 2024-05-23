@@ -61,16 +61,52 @@
 							<h3 id="pink_dog">ピンク犬 さん</h3>
 							<div class="room">
 								<ul>
-								  <li class="chat me">   <!-- 相手のメッセージにはclass「me」をつける。 -->
-									<p class="mes">資料を紙媒体で保存したいのですが、画像化したリ、印刷したりするのは問題ないでしょうか</p>
-									<div class="status">既読<br>24:05</div>
-								  </li>
-								  <li class="chat you">    <!-- 自分のメッセージにはclass「you」をつける。 -->
-									<p class="mes">個人使用の範囲内であれば問題ありません。ただし、スクリーンショットや、印刷をされると、訂正更新した際に更新されないので、更新内容に気を配っておくことをお勧めします!!</p>
-									<div class="status">24:10</div>
-								  </li>
+									<li class="chat me">   <!-- 相手のメッセージにはclass「you」をつける。 -->
+										<p class="mes">ファイルの読み取りをしようとしたところ、エラーになります。どうすればいいですか？<br>[
+											File "/home/bi*****/class/5.15.py", line 85, in module
+											with open(file_a_path, encoding='utf-8') as input_file:
+											FileNotFoundError: [Errno 2] No such file or directory: 'dirA/text1.txt']
+										</p>
+										<div class="status">既読<br>16:00</div>
+									</li>
+									<li class="chat you">    <!-- 相手のメッセージにはclass「me」をつける。 -->
+										<p class="mes">指定したパスにtext1.txtが存在しないと言われているので、dirAの中にtext1.txtがあるかを確認してください!!もし、それでもエラー理由が分からなければ
+											ファイルの階層が分かるようなスクショと、実行してエラーが出たところのスクショを添付してください。
+										</p>
+										<div class="status">16:23</div>
+									</li>
+									<li class="chat me">    <!-- 相手のメッセージにはclass「me」をつける。 -->
+										<p class="mes">うまくいきませんでした…。画像は添付しました。</p>
+										<div class="status">既読<br>18:26</div>
+									</li>
+									<li class="chat you">    <!-- 自分のメッセージにはclass「you」をつける。 -->
+										<p class="mes">画像確認ました。コマンドを打つところに[cd class]としてから実行してみてください! 簡単にいうと、今いる実行している場所はbi*****なのですが、ここからは直接dirAが見えません。
+											dirAはclassの下(中)にあるので、dirAが見える場所まで行ってから実行すると無事アクセスできると思います。※絶対パスで指定するのも1つですが、今は省略します。
+										</p>
+										<div class="status">19:00</div>
+									</li>
+									<li class="chat me">    <!-- 相手のメッセージにはclass「me」をつける。 -->
+										<p class="mes">できました!!　ありがとうございます。</p>
+										<div class="status">既読<br>19:17</div>
+									</li>
+								
 								</ul>
-							  </div>
+							</div>
+
+
+							<h3 id="aporo">アポロチョコ さん</h3>
+							<div class="room">
+								<ul>
+									<li class="chat me">   <!-- 相手のメッセージにはclass「you」をつける。 -->
+										<p class="mes">資料を紙媒体で保存したいのですが、画像化したリ、印刷したりするのは問題ないでしょうか</p>
+										<div class="status">既読<br>24:05</div>
+									</li>
+									<li class="chat you">    <!-- 相手のメッセージにはclass「me」をつける。 -->
+										<p class="mes">個人使用の範囲内であれば問題ありません。ただし、スクリーンショットや、印刷をされると、訂正更新した際に更新されないので、更新内容に気を配っておくことをお勧めします!!</p>
+										<div class="status">24:10</div>
+									</li>
+								</ul>
+							</div>
 						</section>
 
 						<section>
@@ -92,6 +128,7 @@
 							<li><a href="#form">●問い合わせ先</a></li>
 							<li><a href="#list">●質問と回答一覧(ユーザー別)</a></li>
 							<li><a href="#pink_dog">　　ピンク犬 さん</a></li>
+							<li><a href="#aporo">　　アポロチョコ さん</a></li>
 						</ul>
 					</div>
 					<!--/.sub-->
