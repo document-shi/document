@@ -712,71 +712,37 @@ p.btn {margin: 0;}
     margin: 0 5px;        /* 左右に隙間を作る（ちょっと楽してます） */
 }
 
-/* レスポンシブ対応 */
-@media screen and (max-width: 600px) {
-    .room {
-        width: 100%;          /* チャットルームの幅を画面いっぱいにする */
-        padding: 10px 5px;    /* 水平余白を縮小 */
-    }
-
-    .chat {
-        flex-direction: column; /* 小さな画面では縦方向に並べる */
-    }
-
-    .chat .mes {
-        max-width: 100%;       /* メッセージの最大幅を100%にする */
-        margin-bottom: 10px;   /* 下に余白を追加 */
-    }
-
-    .chat .status {
-        font-size: 10px;       /* ステータスの文字サイズを小さくする */
-        text-align: left;      /* 小さな画面では左寄せにする */
-        margin: 5px 0;         /* 上下にマージンを追加 */
-    }
-}
-
 /* 相手メッセージのCSS */
 .chat.you .mes {
 	color: #000;        /* 文字色を白 */
 	background: #fff;   /* 背景を黒 */
-  }
-  
+}
+
   /* 自分メッセージのCSS */
-  .chat.me {
+.chat.me {
 	flex-direction: row-reverse;  /* 左右の並び順を逆順にする */
-  }
-  
-  .chat.me .mes {
+}
+
+.chat.me .mes {
 	color: #000;
 	background: #5AC323;         /* 背景色を緑 */
-  }
-  
-  .chat .status {
+}
+
+.chat .status {
 	text-align: right;            /* 右寄せにする */
-  }
-  
+}
+
   /* レスポンシブ対応 */
-  @media screen and (max-width: 600px) {
-	.chat {
-	  flex-direction: column;        /* 小さな画面では縦方向に並べる */
-	}
-  
+@media screen and (max-width: 600px) {  
 	.chat .mes {
-	  max-width: 90%;                /* メッセージの最大幅を90%にする */
+	  max-width: 80%;                /* メッセージの最大幅を90%にする */
 	  margin-bottom: 10px;           /* 下に余白を追加 */
 	}
-  
-	.chat.me {
-	  flex-direction: column;        /* 自分のメッセージも縦方向に並べる */
-	}
-  
+
 	.chat .status {
 	  font-size: 10px;               /* ステータスの文字サイズを小さくする */
-	  text-align: left;              /* 小さな画面では左寄せにする */
-	  margin: 5px 0;                 /* 上下にマージンを追加 */
 	}
-  }
-
+}
 
 
 
