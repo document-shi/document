@@ -479,28 +479,44 @@ footer a {text-decoration: none;color: #fff;}
 	margin: 0;
 	display: flex;		/*flexボックスを使う指定*/
 	flex-wrap: wrap;	/*折り返す指定*/
-	padding: 0 20px;	/*上下、左右へのボックス内の余白*/
+	padding: 0 5px;	/*上下、左右へのボックス内の余白*/
 }
 
 /*日付(dt)、記事(dd)共通設定*/
-#new dt,
-#new dd {
+#new dt,#new dd {
 	padding: 5px 0;		/*上下、左右へのボックス内の余白*/
 }
 
 /*日付(dt)設定*/
 #new dt {
-	width: 8em;	/*幅。8文字(em)分。※下の「900px以上」の端末用の設定に再設定があります。*/
+	width: 13em;	/*幅。8文字(em)分。※下の「900px以上」の端末用の設定に再設定があります。*/
 }
 
 /*日付の横のマーク（共通設定）*/
 #new dt span {
-	display: none;	/*小さな端末では非表示にしておく。*/
+	/*display: none;	/*小さな端末では非表示にしておく。*/
+	display: inline-block;	/*表示させる*/
+	width: 6em;				/*幅。6文字(em)分。*/
+	color: #fff;			/*文字色*/
+	font-size: 0.8em;		/*文字サイズを80%に。*/
+	text-align: center;		/*文字をセンタリング*/
+	margin: 0 0.5em;		/*アイコンの右側に空けるスペース*/
+	align-self: flex-start;	/*高さを間延びさせない指定*/
+	line-height: 1.8;		/*行間を少し狭く*/
+	position: relative;	/*上下の配置バランスの微調整*/
+}
+
+#gray{
+	background: #999;		/*背景色*/
+}
+
+#red{
+	background: red;		/*背景色*/
 }
 
 /*記事(dd)設定*/
 #new dd {
-	width: calc(100% - 8em);	/*「8em」は上の「#new dt」のwidthの値です。※下の「900px以上」の端末用の設定に再設定があります。*/
+	width: calc(100% - 13em);	/*「8em」は上の「#new dt」のwidthの値です。※下の「900px以上」の端末用の設定に再設定があります。*/
 }
 
 
@@ -907,7 +923,6 @@ html, body {
 #new dt span {
 	display: inline-block;	/*表示させる*/
 	width: 6em;				/*幅。6文字(em)分。*/
-	background: #999;		/*背景色*/
 	color: #fff;			/*文字色*/
 	font-size: 0.8em;		/*文字サイズを80%に。*/
 	text-align: center;		/*文字をセンタリング*/
@@ -915,6 +930,14 @@ html, body {
 	align-self: flex-start;	/*高さを間延びさせない指定*/
 	line-height: 1.8;		/*行間を少し狭く*/
 	position: relative;top: 0.4em;	/*上下の配置バランスの微調整*/
+}
+
+#gray{
+	background: #999;		/*背景色*/
+}
+
+#red{
+	background: red;		/*背景色*/
 }
 
 /*bg1設定。サンプルテンプレートでは「サービス」と書いてあるマーク*/
